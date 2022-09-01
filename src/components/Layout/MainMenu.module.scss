@@ -1,0 +1,44 @@
+.main-header {
+  font-size: 2em;
+  padding: 1rem 2rem;
+}
+
+.main-filter {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  list-style: none;
+  margin: 0rem 2rem 1rem;
+  width: 30%;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.active > div {
+  content: "";
+  //   transform: scaleX(1);
+  width: 100%;
+  position: absolute;
+  margin-top: 2px;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: #f46805;
+  //   transform-origin: bottom right;
+  //   transition: transform 0.25s ease-out;
+}
+
+.main-filter-link {
+  text-align: center;
+  position: relative;
+  color: #f46805;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin: 2rem;
+  flex-wrap: wrap;
+  width: 95%;
+}

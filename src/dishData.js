@@ -1,0 +1,88 @@
+const dishlist = [
+  {
+    id: "9239",
+    key: "1",
+    name: "Bun Bo Nam Bo",
+    image: "Bun-bo-nam-bo.png",
+    price: "8.10",
+  },
+  {
+    id: "9240",
+    key: "2",
+    name: "Bun Vit Gion",
+    image: "Bun-vit-gion.png",
+    price: "8.10",
+  },
+  {
+    id: "9241",
+    key: "3",
+    name: "Bun Nem",
+    image: "Bun-nem.png",
+    price: "8.10",
+  },
+  {
+    id: "9242",
+    key: "4",
+    name: "PhoVietnam",
+    image: "PhoVietnam.png",
+    price: "8.10",
+  },
+  {
+    id: "9243",
+    key: "5",
+    name: "Tofu Cari",
+    image: "Tofu-cari.png",
+    price: "8.10",
+  },
+  {
+    id: "9244",
+    key: "6",
+    name: "Vit Gion Cari",
+    image: "Vit-gion-cari.png",
+    price: "8.10",
+  },
+  {
+    id: "9245",
+    key: "7",
+    name: "Bun Bo Nam Bo",
+    image: "Bun-bo-nam-bo.png",
+    price: "8.10",
+  },
+  {
+    id: "9246",
+    key: "8",
+    name: "Bun Vit Gion",
+    image: "Bun-vit-gion.png",
+    price: "8.10",
+  },
+  {
+    id: "9247",
+    key: "9",
+    name: "Bun Nem",
+    image: "Bun-nem.png",
+    price: "8.10",
+  },
+  {
+    id: "9248",
+    key: "10",
+    name: "PhoVietnam",
+    image: "PhoVietnam.png",
+    price: "8.10",
+  },
+  {
+    id: "9249",
+    key: "11",
+    name: "Tofu Cari",
+    image: "Tofu-cari.png",
+    price: "8.10",
+  },
+  {
+    id: "9250",
+    key: "12",
+    name: "Vit Gion Cari",
+    image: "Vit-gion-cari.png",
+    price: "8.10",
+  },
+];
+
+export default dishlist;
