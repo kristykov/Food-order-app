@@ -42,7 +42,7 @@ const Cart = ({ onClose }: ICartClose) => {
                   <input
                     // key={cardAmount}
                     defaultValue="1"
-                    // value={cardAmount}
+                    value={item.amount}
                     type="number"
                     name="amount"
                     min="1"
