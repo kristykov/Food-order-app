@@ -8,12 +8,30 @@ interface ICartClose {
   onClose: () => void;
 }
 
+interface IAddedItem {
+  id: string;
+  name: string;
+  amount: number;
+  price: string;
+  image: string;
+}
+
 const Cart = ({ onClose }: ICartClose) => {
-  const { items, totalAmount } = useContext(CartContext);
+  const { items, totalAmount, addItem } = useContext(CartContext);
 
   const totalCartAmount = `${totalAmount.toFixed(2)}`;
 
   const hasItems = items.length > 0;
+
+  const cartItemAddHandler = (item: IAddedItem) => {
+    addItem({
+      id: item.id,
+      name: item.name,
+      amount: 1,
+      price: item.price,
+      image: item.image,
+    });
+  };
 
   const cartItems = (
     <ul className={classes["cart-items"]}>
@@ -51,9 +69,9 @@ const Cart = ({ onClose }: ICartClose) => {
 
                   <button
                     type="button"
-                    // onClick={() => {
-                    //   return cartAmountHandler("plus");
-                    // }}
+                    onClick={() => {
+                      return cartItemAddHandler(item);
+                    }}
                   >
                     +
                   </button>
