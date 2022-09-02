@@ -3,8 +3,14 @@ import React from "react";
 import classes from "./Modal.module.scss";
 import { ChildrenType } from "../../interfaces";
 
-const Backdrop = () => {
-  return <div className={classes.backdrop} />;
+interface ICartClose {
+  onClose: () => void;
+}
+
+const Backdrop = ({ onClose }: ICartClose) => {
+  return (
+    <div onClick={onClose} className={classes.backdrop} aria-hidden="true" />
+  );
 };
 const ModalOverlay: React.FC<ChildrenType> = ({ children }) => {
   return (
@@ -16,12 +22,12 @@ const ModalOverlay: React.FC<ChildrenType> = ({ children }) => {
 
 const portalElement = document.getElementById("overlays") as HTMLElement;
 
-const Modal: React.FC<ChildrenType> = ({ children }) => {
+const Modal: React.FC<ChildrenType> = ({ children, onClose }) => {
   return (
     <>
-      {ReactDOM.createPortal(<Backdrop />, portalElement)}
+      {ReactDOM.createPortal(<Backdrop onClose={onClose} />, portalElement)}
       {ReactDOM.createPortal(
-        <ModalOverlay>{children}</ModalOverlay>,
+        <ModalOverlay onClose={onClose}>{children}</ModalOverlay>,
         portalElement,
       )}
     </>

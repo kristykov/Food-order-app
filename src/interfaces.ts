@@ -1,7 +1,6 @@
 import React from "react";
 
 export interface IDish {
-  children?: React.ReactNode;
   id: string;
   key: string;
   name: string;
@@ -9,4 +8,4 @@ export interface IDish {
   price: string;
 }
 
-export type ChildrenType = { children?: React.ReactNode };
+export type ChildrenType = { children?: React.ReactNode; onClose: () => void };

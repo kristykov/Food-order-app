@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IDish } from "../../interfaces";
+import CartContext from "../../store/cart-context";
 import classes from "./MenuCard.module.scss";
 
 const MenuCard = ({ id, name, image, price }: IDish) => {
-  const onOrderHandler = () => {};
+  const { addItem } = useContext(CartContext);
+
+  const onOrderHandler = () => {
+    addItem({
+      id,
+      name,
+      amount: 1,
+      price,
+    });
+  };
   // const [cardAmount, setCardAmount] = useState("1");
 
   // const cartAmountHandler = (sign: string) => {
