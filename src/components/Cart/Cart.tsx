@@ -17,11 +17,15 @@ interface IAddedItem {
 }
 
 const Cart = ({ onClose }: ICartClose) => {
-  const { items, totalAmount, addItem } = useContext(CartContext);
+  const { items, totalAmount, addItem, removeItem } = useContext(CartContext);
 
   const totalCartAmount = `${totalAmount.toFixed(2)}`;
 
   const hasItems = items.length > 0;
+
+  const cartItemRemoveHandler = (id: string) => {
+    removeItem(id);
+  };
 
   const cartItemAddHandler = (item: IAddedItem) => {
     addItem({
@@ -50,9 +54,9 @@ const Cart = ({ onClose }: ICartClose) => {
                 <div className={classes["card-input-field"]}>
                   <button
                     type="button"
-                    // onClick={() => {
-                    //   return cartAmountHandler("minus");
-                    // }}
+                    onClick={() => {
+                      return cartItemRemoveHandler(item.id);
+                    }}
                   >
                     -
                   </button>
