@@ -12,6 +12,7 @@ const MenuCard = ({ id, name, image, price }: IDish) => {
       name,
       amount: 1,
       price,
+      image,
     });
   };
   // const [cardAmount, setCardAmount] = useState("1");

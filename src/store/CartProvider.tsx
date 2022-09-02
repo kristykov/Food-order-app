@@ -17,6 +17,7 @@ interface IAddedItem {
   name: string;
   amount: number;
   price: string;
+  image: string;
 }
 
 const defaultCartState = {
