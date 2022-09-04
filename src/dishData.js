@@ -5,6 +5,7 @@ const dishlist = [
     name: "Bun Bo Nam Bo",
     image: "Bun-bo-nam-bo.png",
     price: "8.10",
+    type: "lunch",
   },
   {
     id: "9240",
@@ -12,6 +13,7 @@ const dishlist = [
     name: "Bun Vit Gion",
     image: "Bun-vit-gion.png",
     price: "8.10",
+    type: "lunch",
   },
   {
     id: "9241",
@@ -19,6 +21,7 @@ const dishlist = [
     name: "Bun Nem",
     image: "Bun-nem.png",
     price: "8.10",
+    type: "lunch",
   },
   {
     id: "9242",
@@ -26,6 +29,7 @@ const dishlist = [
     name: "PhoVietnam",
     image: "PhoVietnam.png",
     price: "8.10",
+    type: "breakfast",
   },
   {
     id: "9243",
@@ -33,6 +37,7 @@ const dishlist = [
     name: "Tofu Cari",
     image: "Tofu-cari.png",
     price: "8.10",
+    type: "coffee",
   },
   {
     id: "9244",
@@ -40,6 +45,7 @@ const dishlist = [
     name: "Vit Gion Cari",
     image: "Vit-gion-cari.png",
     price: "8.10",
+    type: "lunch",
   },
   {
     id: "9245",
@@ -47,6 +53,7 @@ const dishlist = [
     name: "Bun Bo Nam Bo",
     image: "Bun-bo-nam-bo.png",
     price: "8.10",
+    type: "lunch",
   },
   {
     id: "9246",
@@ -54,6 +61,7 @@ const dishlist = [
     name: "Bun Vit Gion",
     image: "Bun-vit-gion.png",
     price: "8.10",
+    type: "lunch",
   },
   {
     id: "9247",
@@ -61,6 +69,7 @@ const dishlist = [
     name: "Bun Nem",
     image: "Bun-nem.png",
     price: "8.10",
+    type: "lunch",
   },
   {
     id: "9248",
@@ -68,6 +77,7 @@ const dishlist = [
     name: "PhoVietnam",
     image: "PhoVietnam.png",
     price: "8.10",
+    type: "lunch",
   },
   {
     id: "9249",
@@ -75,6 +85,7 @@ const dishlist = [
     name: "Tofu Cari",
     image: "Tofu-cari.png",
     price: "8.10",
+    type: "lunch",
   },
   {
     id: "9250",
@@ -82,6 +93,7 @@ const dishlist = [
     name: "Vit Gion Cari",
     image: "Vit-gion-cari.png",
     price: "8.10",
+    type: "lunch",
   },
 ];
 

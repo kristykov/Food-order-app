@@ -1,16 +1,24 @@
 import React, { useState } from "react";
 import MenuCard from "./MenuCard";
-import dishlist from "../../dishData";
+// import dishlist from "../../dishData";
 import classes from "./MainMenu.module.scss";
-
-const data = dishlist;
+import dishlist from "../../dishData";
 
 const MainMenu = () => {
   const [activeLink, setActiveLink] = useState("recomended");
+  let fileredDishList;
 
   const onUpdateActiveSection = (value: string): void => {
     setActiveLink(value);
   };
+
+  if (activeLink === "recomended") {
+    fileredDishList = dishlist;
+  } else {
+    fileredDishList = dishlist.filter((item) => {
+      return item.type === activeLink;
+    });
+  }
 
   return (
     <>
@@ -99,7 +107,7 @@ const MainMenu = () => {
         </li>
       </ul>
       <div className={classes.container}>
-        {data.map((item) => {
+        {fileredDishList.map((item) => {
           return (
             <MenuCard
               id={item.id}

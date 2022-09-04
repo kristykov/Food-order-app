@@ -3,7 +3,7 @@ import classes from "./CartCounter.module.scss";
 import CartContext from "../../store/cart-context";
 
 const CartCounter = () => {
-  const { it ems } = useContext(CartContext);
+  const { items } = useContext(CartContext);
   const numberOfCartItems = items.reduce((currNum, item) => {
     return currNum + item.amount;
   }, 0);
