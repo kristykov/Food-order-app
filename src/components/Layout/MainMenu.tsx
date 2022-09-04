@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import MenuCard from "./MenuCard";
-// import dishlist from "../../dishData";
 import classes from "./MainMenu.module.scss";
 import dishlist from "../../dishData";
 
-const MainMenu = () => {
+interface IProps {
+  searchStr: string;
+}
+
+const MainMenu = ({ searchStr }: IProps) => {
   const [activeLink, setActiveLink] = useState("recomended");
   let fileredDishList;
 
@@ -12,11 +15,24 @@ const MainMenu = () => {
     setActiveLink(value);
   };
 
-  if (activeLink === "recomended") {
-    fileredDishList = dishlist;
-  } else {
+  if (!searchStr) {
+    if (activeLink === "recomended") {
+      fileredDishList = dishlist;
+    } else {
+      fileredDishList = dishlist.filter((item) => {
+        return item.type === activeLink;
+      });
+    }
+  } else if (activeLink === "recomended") {
     fileredDishList = dishlist.filter((item) => {
+      return item.name.toLowerCase().includes(searchStr);
+    });
+  } else {
+    const prefileredDishList = dishlist.filter((item) => {
       return item.type === activeLink;
+    });
+    fileredDishList = prefileredDishList.filter((item) => {
+      return item.name.toLocaleLowerCase().includes(searchStr);
     });
   }
 

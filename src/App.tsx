@@ -6,16 +6,21 @@ import CartProvider from "./store/CartProvider";
 
 const App = () => {
   const [cartIsShown, setCartIsShown] = useState(false);
+  const [searchStr, setSearchStr] = useState("");
   const showCartHandler = () => {
     setCartIsShown(true);
   };
   const hideCartHandler = () => {
     setCartIsShown(false);
   };
+
+  const queryHandler = (q: string) => {
+    setSearchStr(q);
+  };
   return (
     <CartProvider>
-      <Header onShowCart={showCartHandler} />
-      <MainMenu />
+      <Header onShowCart={showCartHandler} onQuery={queryHandler} />
+      <MainMenu searchStr={searchStr} />
       {cartIsShown && <Cart onClose={hideCartHandler} />}
     </CartProvider>
   );

@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import IonIcon from "@reacticons/ionicons";
 import classes from "./Header.module.scss";
 import CartCounter from "./CartCounter";
 
-interface ICartShow {
+interface IProps {
   onShowCart: () => void;
+  onQuery: (str: string) => void;
 }
 
-const Header = ({ onShowCart }: ICartShow) => {
+const Header = ({ onShowCart, onQuery }: IProps) => {
+  // const search = (items) => {};
+
+  const [q, setQ] = useState("");
+  const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const input = (e.currentTarget as HTMLInputElement).value;
+    setQ(input);
+  };
+  onQuery(q);
+
   return (
     <header className={classes.header}>
       <div className={classes["header-container"]}>
@@ -16,7 +26,12 @@ const Header = ({ onShowCart }: ICartShow) => {
       </div>
       <form action="" className={classes["header-form-controls"]}>
         <label htmlFor="input">
-          <input placeholder="Search your food..." type="text" />
+          <input
+            placeholder="Search your food..."
+            type="text"
+            onChange={inputHandler}
+            value={q}
+          />
         </label>
         <button type="submit">
           <IonIcon
