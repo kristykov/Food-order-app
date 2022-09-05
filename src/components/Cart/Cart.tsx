@@ -43,7 +43,10 @@ const Cart = ({ onClose }: ICartClose) => {
         return (
           <li className={classes["cart-item"]}>
             <div className={classes["cart-item-img"]}>
-              <img src={require(`../../images/${item.image}`).default} alt="" />
+              <img
+                src={require(`../../../assets/${item.image}`).default}
+                alt=""
+              />
             </div>
             <div className={classes["cart-item-context"]}>
               <h3>{item.name}</h3>
