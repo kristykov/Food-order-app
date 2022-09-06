@@ -12,6 +12,7 @@ const MenuCard = ({ id, name, image, price }: IDish) => {
       name,
       amount: 1,
       price,
+      image,
     });
   };
   // const [cardAmount, setCardAmount] = useState("1");
@@ -31,7 +32,7 @@ const MenuCard = ({ id, name, image, price }: IDish) => {
     <div className={classes.card} key={id}>
       <img
         className={classes.img}
-        src={require(`../../images/${image}`).default}
+        src={require(`../../../assets/${image}`).default}
         alt="Dish"
       />
       <div className={classes["card-data"]}>
