@@ -8,13 +8,6 @@ interface IAddedItem {
   image: string;
 }
 
-// interface ICartState {
-//   items: IAddedItem[];
-//   totalAmount: number;
-//   addItem: (item: IAddedItem) => {};
-//   removeItem: (id: string) => {};
-// }
-
 const CartContext = React.createContext({
   items: [] as IAddedItem[],
   totalAmount: 0,

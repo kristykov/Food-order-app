@@ -43,7 +43,6 @@ const cartReducer = (state: ICartState, action: IAction) => {
         updatedItems = [...state.items];
         updatedItems[existingCartItemIndex] = updatedItem;
       } else {
-        // updatedItem = { ...action.item };
         updatedItems = state.items.concat(action.item);
       }
 

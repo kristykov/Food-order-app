@@ -9,8 +9,6 @@ interface IProps {
 }
 
 const Header = ({ onShowCart, onQuery }: IProps) => {
-  // const search = (items) => {};
-
   const [q, setQ] = useState("");
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const input = (e.currentTarget as HTMLInputElement).value;

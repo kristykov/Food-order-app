@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-// import PropTypes from "prop-types";
 import Modal from "../UI/Modal";
 import classes from "./Cart.module.scss";
 import CartContext from "../../store/cart-context";
@@ -62,7 +61,6 @@ const Cart = ({ onClose }: ICartClose) => {
                   </button>
 
                   <input
-                    // key={cardAmount}
                     defaultValue="1"
                     value={item.amount}
                     type="number"
@@ -115,9 +113,5 @@ const Cart = ({ onClose }: ICartClose) => {
     </Modal>
   );
 };
-
-// Cart.propTypes = {
-//   onClose: PropTypes.func.isRequired,
-// };
 
 export default Cart;
