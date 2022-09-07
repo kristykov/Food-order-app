@@ -18,7 +18,7 @@ const MenuCard = ({ id, name, image, price }: IDish) => {
   return (
     <div className={classes.card} key={id}>
       <img
-        className={classes.img}
+        className={classes["card-img"]}
         src={require(`../../assets/${image}`).default}
         alt="Dish"
       />

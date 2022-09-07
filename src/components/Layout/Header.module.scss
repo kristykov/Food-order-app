@@ -50,22 +50,21 @@
 }
 
 .header-button {
+  display: flex;
   width: 7.5rem;
   height: 2.5rem;
+  padding: 0.8rem;
+  margin-right: 25px;
+  justify-content: space-around;
   border: #f46805;
   border-radius: 20px;
   background-color: #f46805;
   color: #ffffff;
-  padding: 0.8rem;
-  display: flex;
-  justify-content: space-around;
-  margin-right: 25px;
   cursor: pointer;
 }
 
 .header-cart-btn {
-  color: #ffffff !important;
-
   width: 1rem;
   margin: 0 0.2rem;
+  color: #ffffff !important;
 }
