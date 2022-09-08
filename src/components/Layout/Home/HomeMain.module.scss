@@ -1,0 +1,47 @@
+.main {
+  color: aqua;
+}
+
+.home {
+  color: aqua;
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+  }
+
+  &-data {
+    color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-title {
+    font-size: var(--biggest-font-size);
+    color: var(--orange-color);
+    margin-bottom: 2.5rem;
+  }
+
+  &-subtitle {
+    font-size: var(--h1-font-size);
+    color: var(--gray-txt-color);
+    margin-bottom: 1.5rem;
+  }
+
+  &-btn {
+    display: flex;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--orange-color);
+    color: #fff;
+  }
+
+  &-img {
+    width: 500px;
+  }
+}
