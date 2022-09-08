@@ -1,28 +1,31 @@
-import React, { useState } from "react";
-import Cart from "./components/Cart/Cart";
-import Header from "./components/Layout/Header";
-import MainMenu from "./components/Layout/MainMenu";
-import CartProvider from "./store/CartProvider";
+import React from "react";
+// import React, { useState } from "react";
+// import Cart from "./components/Cart/Cart";
+// import Header from "./components/Layout/Header";
+import HomeHeader from "./components/Layout/Home/HomeHeader";
+// import MainMenu from "./components/Layout/MainMenu";
+// import CartProvider from "./store/CartProvider";
 
 const App = () => {
-  const [cartIsShown, setCartIsShown] = useState(false);
-  const [searchStr, setSearchStr] = useState("");
-  const showCartHandler = () => {
-    setCartIsShown(true);
-  };
-  const hideCartHandler = () => {
-    setCartIsShown(false);
-  };
+  // const [cartIsShown, setCartIsShown] = useState(false);
+  // const [searchStr, setSearchStr] = useState("");
+  // const showCartHandler = () => {
+  //   setCartIsShown(true);
+  // };
+  // const hideCartHandler = () => {
+  //   setCartIsShown(false);
+  // };
 
-  const queryHandler = (q: string) => {
-    setSearchStr(q);
-  };
+  // const queryHandler = (q: string) => {
+  //   setSearchStr(q);
+  // };
   return (
-    <CartProvider>
-      <Header onShowCart={showCartHandler} onQuery={queryHandler} />
-      <MainMenu searchStr={searchStr} />
-      {cartIsShown && <Cart onClose={hideCartHandler} />}
-    </CartProvider>
+    <HomeHeader />
+    // <CartProvider>
+    //   <Header onShowCart={showCartHandler} onQuery={queryHandler} />
+    //   <MainMenu searchStr={searchStr} />
+    //   {cartIsShown && <Cart onClose={hideCartHandler} />}
+    // </CartProvider>
   );
 };
 
