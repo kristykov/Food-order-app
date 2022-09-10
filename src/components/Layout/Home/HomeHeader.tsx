@@ -30,7 +30,7 @@ const HomeHeader = () => {
               </a>
             </li>
             <li className={classes["nav-item"]}>
-              <a href="#menu" className={classes["nav-link"]}>
+              <a href="/menu" className={classes["nav-link"]}>
                 Menu
               </a>
             </li>

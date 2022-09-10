@@ -1,5 +1,6 @@
 import React from "react";
-import Home from "./components/Layout/Home/Home";
+// import Home from "./components/Layout/Home/Home";
+import Navigation from "./navigation/Navigation";
 // import React, { useState } from "react";
 // import Cart from "./components/Cart/Cart";
 // import Header from "./components/Layout/Header";
@@ -21,7 +22,8 @@ const App = () => {
   //   setSearchStr(q);
   // };
   return (
-    <Home />
+    <Navigation />
+    // <Home />
     // <CartProvider>
     //   <Header onShowCart={showCartHandler} onQuery={queryHandler} />
     //   <MainMenu searchStr={searchStr} />
