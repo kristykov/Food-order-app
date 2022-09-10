@@ -10,13 +10,13 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  max-width: 1024px;
-  height: 5rem;
+  max-width: 1200px;
+  height: 6rem;
   margin: 0 auto;
   align-items: center;
 
   &-logo {
-    // color: aqua;
+    color: var(--orange-color);
   }
 
   &-menu {
@@ -48,51 +48,33 @@
   }
 }
 
-.auth {
-  &-btn {
-    display: flex;
-    width: 5rem;
-    height: 1.8rem;
-    padding: 5px;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 12px;
-    transition: 0.4s;
-    cursor: pointer;
-  }
+.auth-icon {
+  height: 1.5rem !important;
+  margin-right: 4px;
+  font-size: var(--h3-font-size);
+}
 
-  &-icon {
-    margin-right: 4px;
-    font-size: 12px;
-  }
+a.auth-login {
+  border: 1px solid var(--orange-color);
+  background-color: transparent !important;
+  color: var(--orange-color);
 
-  &-login {
-    border: 1px solid #f46805;
-    background-color: transparent;
-    color: #f46805;
-
-    &:hover {
-      background-color: #f46805;
-      color: #ffffff;
-    }
-  }
-
-  &-signup {
-    background-color: #f46805;
+  &:hover {
+    background-color: var(--orange-color) !important;
     color: #ffffff;
+  }
+}
 
-    &:hover {
-      border: 1px solid #f46805;
-      background-color: transparent;
-      color: #f46805;
-    }
+a.auth-signup {
+  background-color: var(--orange-color);
+  color: #ffffff;
+
+  &:hover {
+    background-color: transparent !important;
+    color: var(--orange-color);
   }
 }
 
 .active-link {
-  // color: aqua;
+  color: var(--orange-color);
 }

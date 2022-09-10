@@ -1,0 +1,75 @@
+.reviews {
+  color: black;
+
+  &-container {
+    color: black;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &-description {
+    max-width: 400px;
+  }
+
+  &-title {
+    color: black;
+  }
+
+  &-customer {
+    &-profile {
+      color: black;
+    }
+  }
+}
+
+.customer {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+
+  &-pic {
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  &-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-name {
+    font-weight: 600;
+  }
+
+  &-job {
+    color: black;
+  }
+
+  &-review {
+    color: black;
+  }
+
+  &-rate {
+    display: flex;
+    padding-top: 1rem;
+
+    &-star {
+      filter: var(--orange-color-svg);
+    }
+
+    &-text {
+      padding-left: 1rem;
+    }
+  }
+}
+
+.burger {
+  width: 400px;
+  border-radius: 50%;
+  border: 10px solid var(--orange-color);
+}

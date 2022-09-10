@@ -4,9 +4,11 @@
 /*===== VARIABLES CSS =====*/
 :root {
   /*========== Colors ==========*/
-  --orange-color: #f46805;
+  --orange-color: #f58742;
   --gray-bg-color: #f5f5f5;
   --gray-txt-color: #342f2f;
+  --orange-color-svg: invert(78%) sepia(30%) saturate(6841%) hue-rotate(332deg)
+    brightness(101%) contrast(92%);
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -60,11 +62,43 @@ a {
   color: var(--gray-txt-color);
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
+.section {
+  padding: 5rem 0;
   height: 100vh;
+}
+
+.section-subtitle {
+  color: var(--orange-color);
+  font-size: var();
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: var(--h1-font-size);
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  // height: 100vh;
   align-items: center;
   justify-items: center;
   align-content: center;
+}
+
+.general-btn {
+  display: flex;
+  width: 8rem;
+  height: 3rem;
+  padding: 1rem;
+  border: 1px solid var(--orange-color);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange-color);
+  font-weight: 600;
+  color: #fff;
+  transition: 0.4s;
+  cursor: pointer;
 }

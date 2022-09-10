@@ -42,15 +42,12 @@ const HomeHeader = () => {
           </ul>
         </div>
         <div className={classes["nav-auth"]}>
-          <a
-            className={`${classes["auth-btn"]} ${classes["auth-login"]}`}
-            href="/login"
-          >
+          <a className={`general-btn ${classes["auth-login"]}`} href="/login">
             <IonIcon className={classes["auth-icon"]} name="log-in-outline" />
             Log In
           </a>
           <a
-            className={`${classes["auth-btn"]} ${classes["auth-signup"]}`}
+            className={` general-btn ${classes["auth-signup"]}`}
             href="/register"
           >
             <IonIcon

@@ -29,12 +29,16 @@ module.exports = ({ mode }) => {
           use: [{ loader: "babel-loader" }],
         },
         {
-          test: /\.(jpg|jpeg|png|gif|mp3|svg|woff(2)?|ttf|eot)$/,
+          test: /\.(jpg|jpeg|png|gif|mp3|woff(2)?|ttf|eot)$/,
           use: [{ loader: "file-loader" }],
         },
         {
           test: /\.(css|scss)$/,
           use: ["style-loader", "css-loader", "sass-loader"],
+        },
+        {
+          test: /\.svg$/,
+          use: ["@svgr/webpack"],
         },
       ],
     },

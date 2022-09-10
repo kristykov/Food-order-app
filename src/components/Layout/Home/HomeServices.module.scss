@@ -1,0 +1,32 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-container {
+    display: flex;
+    padding-top: 3rem;
+    gap: 3rem;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-img {
+    width: 100px;
+    filter: var(--orange-color-svg);
+  }
+
+  &-title {
+    padding: 1rem 0;
+  }
+
+  &-description {
+    text-align: center;
+  }
+}
