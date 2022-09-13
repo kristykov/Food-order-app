@@ -37,7 +37,7 @@ const MainMenu = ({ searchStr }: IProps) => {
   }
 
   return (
-    <>
+    <section className={classes["main-section"]}>
       <h2 className={classes["main-header"]}>Find the menu you want</h2>
       <ul className={classes["main-filter"]}>
         <li
@@ -135,7 +135,7 @@ const MainMenu = ({ searchStr }: IProps) => {
           );
         })}
       </div>
-    </>
+    </section>
   );
 };
 

@@ -1,16 +1,23 @@
+.main {
+  &-section {
+    padding: 2rem 4rem 0rem 10rem;
+  }
+}
+
 .main-header {
-  padding: 1rem 2rem;
-  font-size: 2em;
+  color: black;
+  // padding: 1rem 2rem;
 }
 
 .main-filter {
   position: relative;
   display: flex;
-  margin: 0rem 2rem 1rem;
-  width: 30%;
   flex-direction: row;
-  list-style: none;
   justify-content: space-between;
+  // margin: 0rem 2rem 1rem;
+  width: 40%;
+  list-style: none;
+  font-size: var(--small-font-size);
   cursor: pointer;
 }
 
@@ -22,20 +29,20 @@
   height: 2px;
   width: 100%;
   margin-top: 2px;
-  background-color: #f46805;
+  background-color: var(--orange-color);
 }
 
 .main-filter-link {
   position: relative;
   text-align: center;
-  color: #f46805;
+  color: var(--orange-color);
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin: 2rem;
-  gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  // margin: 2rem;
+  gap: 4rem;
 }
 
 @media screen and (max-width: 1068px) {
