@@ -1,0 +1,57 @@
+.app {
+  color: black;
+
+  &-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 400px;
+    background-color: var(--orange-color);
+    border-radius: 40px;
+  }
+
+  &-phone {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+  }
+
+  &-description {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rem;
+  }
+
+  &-title {
+    max-width: 25rem;
+    line-height: 3rem;
+    color: #fff;
+  }
+
+  &-users {
+    display: flex;
+    margin: 2rem 0;
+    gap: 0.6rem;
+    color: #fff;
+
+    &-img {
+      width: 50px;
+      border-radius: 50%;
+      border: 2px solid;
+    }
+  }
+
+  &-links {
+    display: flex;
+    gap: 1rem;
+
+    & img {
+      width: 100px;
+      cursor: pointer;
+    }
+  }
+}

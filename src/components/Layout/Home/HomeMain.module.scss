@@ -1,0 +1,43 @@
+.main {
+  color: aqua;
+}
+
+.home {
+  color: aqua;
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+    max-width: 1280px !important;
+    margin: 0 auto;
+    height: 90vh;
+  }
+
+  &-data {
+    color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-title {
+    font-size: var(--biggest-font-size);
+    color: var(--orange-color);
+    margin-bottom: 2.5rem;
+  }
+
+  &-subtitle {
+    font-size: var(--h1-font-size);
+    color: var(--gray-txt-color);
+    margin-bottom: 1.5rem;
+  }
+
+  &-btn {
+    width: 9rem !important;
+  }
+
+  &-img {
+    width: 700px;
+  }
+}

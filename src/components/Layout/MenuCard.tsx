@@ -30,7 +30,7 @@ const MenuCard = ({ id, name, image, price }: IDish) => {
           <p>$</p>
           <span>{price}</span>
         </div>
-        <button onClick={onOrderHandler} type="button">
+        <button className="general-btn" onClick={onOrderHandler} type="button">
           Order
         </button>
       </div>
