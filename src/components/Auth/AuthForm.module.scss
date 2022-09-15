@@ -1,0 +1,57 @@
+.auth {
+  max-width: 25rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  &-title {
+    margin-bottom: 1rem;
+  }
+
+  &-subtitle {
+    margin-bottom: 1.5rem;
+  }
+
+  &-control {
+    margin-bottom: 1rem;
+
+    &-label {
+      display: block;
+      margin: 0.5rem auto;
+      font-weight: bold;
+    }
+
+    &-input {
+      width: 100%;
+      height: 2rem;
+      padding: 0.25rem;
+      text-align: left;
+      border-radius: 4px;
+      border: 1px solid #fcdbc5;
+    }
+
+    &-input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px var(--gray-bg-color) inset;
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+
+  &-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 1.5rem;
+  }
+
+  #loginBtn {
+    width: 100%;
+    height: 2rem;
+    border-radius: 4px;
+  }
+}

@@ -70,6 +70,7 @@
   "dependencies": {
     "@reacticons/ionicons": "^6.0.3",
     "babel-jest": "^29.0.2",
+    "firebase": "^9.9.4",
     "prop-types": "^15.8.1",
     "react-router-dom": "^5.3.3"
   }
