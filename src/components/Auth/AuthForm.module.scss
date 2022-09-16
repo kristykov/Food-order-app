@@ -1,10 +1,16 @@
 .auth {
   max-width: 25rem;
-  margin: 3rem auto;
+  margin: 0rem auto;
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   text-align: center;
+
+  &-home-link {
+    display: inline-block;
+    margin: 2rem;
+    color: var(--orange-color);
+  }
 
   &-title {
     margin-bottom: 1rem;
@@ -40,12 +46,25 @@
       }
     }
   }
+  &-error-text {
+    text-align: left;
+    font-size: var(--smaller-font-size);
+    color: rgb(243, 102, 92);
+  }
+
+  &-switch {
+    margin-top: 1.5rem;
+    font-size: var(--smaller-font-size);
+
+    &-link {
+      text-decoration: underline;
+    }
+  }
 
   &-actions {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     margin-top: 1.5rem;
   }
 
@@ -53,5 +72,6 @@
     width: 100%;
     height: 2rem;
     border-radius: 4px;
+    font-size: var(--normal-font-size);
   }
 }

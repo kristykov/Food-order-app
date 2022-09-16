@@ -48,7 +48,7 @@ const HomeHeader = () => {
           </a>
           <a
             className={` general-btn ${classes["auth-signup"]}`}
-            href="/register"
+            href="/registration"
           >
             <IonIcon
               className={classes["auth-icon"]}

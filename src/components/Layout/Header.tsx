@@ -10,6 +10,7 @@ interface IProps {
 }
 
 const Header = ({ onShowCart, onQuery }: IProps) => {
+  const userName = localStorage.getItem("username");
   const [q, setQ] = useState("");
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const input = (e.currentTarget as HTMLInputElement).value;
@@ -24,7 +25,7 @@ const Header = ({ onShowCart, onQuery }: IProps) => {
       </a>
       <div className={classes["header-container"]}>
         <div className={classes["header-content"]}>
-          <h1 className={classes["header-title"]}>Welcome, userName!</h1>
+          <h1 className={classes["header-title"]}>Welcome, {userName}!</h1>
           <p className={classes["header-subtitle"]}>
             Don't forget to eat healthy food today
           </p>
