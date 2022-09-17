@@ -20,7 +20,7 @@ const Header = ({ onShowCart, onQuery }: IProps) => {
 
   return (
     <header className={classes.header}>
-      <a href="/home">
+      <a href="/">
         <Logo className={classes["header-logo-img"]} />
       </a>
       <div className={classes["header-container"]}>

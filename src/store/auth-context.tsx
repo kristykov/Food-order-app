@@ -15,15 +15,11 @@ const AuthContext = React.createContext({
 export const AuthContextProvider = ({ children }: Props) => {
   const initialToken = localStorage.getItem("token");
   const [token, setToken] = useState(initialToken);
-  const [userLoggedIn, setUserLoggedIn] = useState(false);
-  //   const userIsLoggedIn = !!token;
+  const userIsLoggedIn = !!token;
 
   const loginHandler = (tkn: string) => {
-    console.log("works");
     setToken(tkn);
     localStorage.setItem("token", tkn);
-    setUserLoggedIn(true);
-    // console.log("after getting a token", userIsLoggedIn);
   };
 
   const logoutHandler = () => {
@@ -34,7 +30,7 @@ export const AuthContextProvider = ({ children }: Props) => {
   // eslint-disable-next-line react/jsx-no-constructed-context-values
   const contextValue = {
     token: token as string,
-    isLoggedIn: userLoggedIn,
+    isLoggedIn: userIsLoggedIn,
     login: loginHandler,
     logout: logoutHandler,
   };

@@ -117,7 +117,7 @@ const AuthForm = ({ type }: IProps) => {
 
   return (
     <section>
-      <a className={classes["auth-home-link"]} href="/home">
+      <a className={classes["auth-home-link"]} href="/">
         Food
       </a>
       <div className={classes.auth}>

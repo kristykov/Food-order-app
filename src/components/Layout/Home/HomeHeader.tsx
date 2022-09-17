@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import IonIcon from "@reacticons/ionicons";
 import classes from "./HomeHeader.module.scss";
+import AuthContext from "../../../store/auth-context";
 
 const HomeHeader = () => {
+  const authCtx = useContext(AuthContext);
+  const { isLoggedIn, logout } = authCtx;
+
+  const logoutHandler = () => {
+    logout();
+    localStorage.removeItem("username");
+  };
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
@@ -42,20 +50,38 @@ const HomeHeader = () => {
           </ul>
         </div>
         <div className={classes["nav-auth"]}>
-          <a className={`general-btn ${classes["auth-login"]}`} href="/login">
-            <IonIcon className={classes["auth-icon"]} name="log-in-outline" />
-            Log In
-          </a>
-          <a
-            className={` general-btn ${classes["auth-signup"]}`}
-            href="/registration"
-          >
-            <IonIcon
-              className={classes["auth-icon"]}
-              name="people-circle-outline"
-            />
-            Sign Up
-          </a>
+          {!isLoggedIn && (
+            <a className={`general-btn ${classes["auth-login"]}`} href="/login">
+              <IonIcon className={classes["auth-icon"]} name="log-in-outline" />
+              Log In
+            </a>
+          )}
+          {!isLoggedIn && (
+            <a
+              className={` general-btn ${classes["auth-signup"]}`}
+              href="/registration"
+            >
+              <IonIcon
+                className={classes["auth-icon"]}
+                name="people-circle-outline"
+              />
+              Sign Up
+            </a>
+          )}
+          {isLoggedIn && (
+            <button
+              onClick={logoutHandler}
+              type="button"
+              className={`${classes["logout-btn"]} general-btn `}
+            >
+              <IonIcon
+                id={classes.logoutIcon}
+                className={`${classes["auth-icon"]}`}
+                name="log-out-outline"
+              />
+              Logout
+            </button>
+          )}
         </div>
       </nav>
     </header>

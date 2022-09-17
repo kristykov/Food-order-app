@@ -54,6 +54,14 @@
   font-size: var(--h3-font-size);
 }
 
+.logout-btn {
+  font-size: var(--normal-font-size);
+}
+
+#logoutIcon {
+  font-size: var(--h2-font-size);
+}
+
 a.auth-login {
   border: 1px solid var(--orange-color);
   background-color: transparent !important;

@@ -7,6 +7,7 @@ import Cart from "../../components/Cart/Cart";
 const Menu = () => {
   const [cartIsShown, setCartIsShown] = useState(false);
   const [searchStr, setSearchStr] = useState("");
+
   const showCartHandler = () => {
     setCartIsShown(true);
   };

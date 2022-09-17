@@ -15,7 +15,7 @@ const HomeMain = () => {
           <h2 className={classes["home-subtitle"]}>
             Try the best food of the week
           </h2>
-          <a href="/home" className={`general-btn ${classes["home-btn"]}`}>
+          <a href="/" className={`general-btn ${classes["home-btn"]}`}>
             View Menu
           </a>
         </div>
