@@ -1,0 +1,54 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-container {
+    display: flex;
+    max-width: 1024px;
+    margin: 0 auto;
+    gap: 7rem;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-logo {
+    font-weight: 500;
+    color: var(--orange-color);
+  }
+
+  &-description {
+    font-size: var(--small-font-size);
+  }
+
+  &-social {
+    margin-top: 1rem;
+
+    &-icon {
+      margin: 1rem 1rem 0 0;
+      font-size: 1.5rem;
+      color: var(--orange-color);
+    }
+  }
+
+  &-title {
+    margin-bottom: 1rem;
+  }
+
+  &-list-item {
+    margin-bottom: 0.5rem;
+  }
+
+  &-link {
+    color: var(--light-gray-txt-color);
+  }
+
+  &-copy-rights {
+    margin: 2rem 0 1rem;
+    font-size: var(--smaller-font-size);
+    color: var(--light-gray-txt-color);
+  }
+}

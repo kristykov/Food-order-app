@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
-// import { BrowserRouter, Route } from "react-router-dom";
-// import Header from "../components/Layout/Header";
 import Home from "../pages/Home/Home";
 import Menu from "../pages/Menu/Menu";
 import AuthForm from "../components/Auth/AuthForm";
@@ -10,11 +8,8 @@ import ModalAuth from "../components/UI/ModalAuth";
 
 const Navigation = () => {
   const authCtx = useContext(AuthContext);
-  // const { isLoggedIn } = authCtx;
-  console.log(authCtx.isLoggedIn);
   return (
     <Switch>
-      {/* <Home /> */}
       <Route path="/" exact>
         <Home />
       </Route>
