@@ -25,7 +25,7 @@ const Header = ({ onShowCart, onQuery }: IProps) => {
       </a>
       <div className={classes["header-container"]}>
         <div className={classes["header-content"]}>
-          <h1 className={classes["header-title"]}>Welcome, {userName}!</h1>
+          <h3 className={classes["header-title"]}>Welcome, {userName}!</h3>
           <p className={classes["header-subtitle"]}>
             Don't forget to eat healthy food today
           </p>
