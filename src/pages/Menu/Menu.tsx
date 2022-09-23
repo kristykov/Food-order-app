@@ -3,6 +3,7 @@ import CartProvider from "../../store/CartProvider";
 import Header from "../../components/Layout/Header";
 import MainMenu from "../../components/Layout/MainMenu";
 import Cart from "../../components/Cart/Cart";
+import Footer from "../../components/Layout/Footer/Footer";
 
 const Menu = () => {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -24,6 +25,7 @@ const Menu = () => {
       <Header onShowCart={showCartHandler} onQuery={queryHandler} />
       <MainMenu searchStr={searchStr} />
       {cartIsShown && <Cart onClose={hideCartHandler} />}
+      <Footer />
     </CartProvider>
   );
 };
