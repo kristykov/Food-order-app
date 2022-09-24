@@ -43,11 +43,16 @@
   gap: 2rem;
 }
 
+@media screen and (max-width: 1250px) {
+  .main-filter {
+    width: 46%;
+  }
+}
 @media screen and (max-width: 1068px) {
   .container {
     grid-template-columns: repeat(3, 1fr);
   }
   .main-filter {
-    width: 50%;
+    width: 56%;
   }
 }

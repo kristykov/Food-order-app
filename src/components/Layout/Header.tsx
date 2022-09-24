@@ -25,10 +25,8 @@ const Header = ({ onShowCart, onQuery }: IProps) => {
       </a>
       <div className={classes["header-container"]}>
         <div className={classes["header-content"]}>
-          <h3 className={classes["header-title"]}>Welcome, {userName}!</h3>
-          <p className={classes["header-subtitle"]}>
-            Don't forget to eat healthy food today
-          </p>
+          <h3>Welcome, {userName}!</h3>
+          <p>Don't forget to eat healthy food today</p>
         </div>
         <form action="" className={classes["header-form-controls"]}>
           <label htmlFor="input">
@@ -52,8 +50,8 @@ const Header = ({ onShowCart, onQuery }: IProps) => {
           className={`${classes["header-button"]} general-btn`}
         >
           <IonIcon className={classes["header-cart-btn"]} name="bag-handle" />
+          <CartCounter />
         </button>
-        <CartCounter />
       </div>
     </header>
   );

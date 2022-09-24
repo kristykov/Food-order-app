@@ -63,6 +63,13 @@ a {
   color: var(--gray-txt-color);
 }
 
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .section {
   padding: 5rem 0;
   height: 100vh;

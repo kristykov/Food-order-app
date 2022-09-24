@@ -7,7 +7,7 @@ const CartCounter = () => {
   const numberOfCartItems = items.reduce((currNum, item) => {
     return currNum + item.amount;
   }, 0);
-  return <div className={classes.counter}>{numberOfCartItems}</div>;
+  return <span className={classes.counter}>{numberOfCartItems}</span>;
 };
 
 export default CartCounter;
