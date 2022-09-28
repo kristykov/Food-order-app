@@ -1,13 +1,26 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import AuthContext from "../../store/auth-context";
+// import AuthContext from "../../store/auth-context";
 import classes from "./AuthForm.module.scss";
+import { login } from "../../store/authSlice";
 
 interface IProps {
   type: string;
 }
 
 const AuthForm = ({ type }: IProps) => {
+  const { isAuthenticated } = useSelector((state: any) => {
+    return state.auth;
+  });
+  const history = useHistory();
+  useEffect(() => {
+    if (isAuthenticated) {
+      console.log("works");
+      history.push("/menu");
+    }
+  }, [history, isAuthenticated]);
+  const dispatch = useDispatch();
   const emailInputRef = useRef<HTMLInputElement>(null);
   const passwordInputRef = useRef<HTMLInputElement>(null);
   const userInputRef = useRef<HTMLInputElement>(null);
@@ -22,8 +35,7 @@ const AuthForm = ({ type }: IProps) => {
   const enteredPassword = passwordInputRef.current
     ? passwordInputRef.current.value
     : "";
-  const authCtx = useContext(AuthContext);
-  const history = useHistory();
+  // const authCtx = useContext(AuthContext);
 
   const emailValidation = (email: string) => {
     if (email.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/)) {
@@ -106,8 +118,10 @@ const AuthForm = ({ type }: IProps) => {
         });
       })
       .then((data) => {
-        authCtx.login(data.idToken);
+        // authCtx.login(data.idToken);
+        dispatch(login(data.idToken));
         localStorage.setItem("username", enteredUsername);
+        // history.push("/menu");
         history.replace("/menu");
       });
 

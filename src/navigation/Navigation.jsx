@@ -1,38 +1,60 @@
-import React, { useContext } from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Redirect, Route, Switch, useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Home from "../pages/Home/Home";
 import Menu from "../pages/Menu/Menu";
 import AuthForm from "../components/Auth/AuthForm";
-import AuthContext from "../store/auth-context";
+// import AuthContext from "../store/auth-context";
 import ModalAuth from "../components/UI/ModalAuth";
+// import { isLoggedIn } from "../store/authSlice";
 
 const Navigation = () => {
-  const authCtx = useContext(AuthContext);
+  const { isAuthenticated } = useSelector((state) => {
+    return state.auth;
+  });
+  const history = useHistory();
+  useEffect(() => {
+    if (isAuthenticated) {
+      history.push("/menu");
+      console.log("auth from nav");
+    }
+  });
+  console.log(isAuthenticated);
+  // const history = useHistory();
+  // const initialToken = localStorage.getItem("token");
+  // const [token, setToken] = useState(initialToken);
+  // useEffect(() => {
+  //   setToken(initialToken);
+  // }, [initialToken]);
+  // const userIsLoggedIn = !!token;
+  // const authCtx = useContext(AuthContext);
+  // const auth = useSelector(isLoggedIn);
+  // console.log("auth", auth);
   return (
     <Switch>
       <Route path="/" exact>
         <Home />
       </Route>
 
-      {authCtx.isLoggedIn && (
+      {isAuthenticated && (
         <Route path="/menu">
           <Menu />
         </Route>
       )}
 
-      {!authCtx.isLoggedIn && (
+      {!isAuthenticated && (
         <Route path="/menu">
           <Home />
           <ModalAuth />
         </Route>
       )}
 
-      {!authCtx.isLoggedIn && (
+      {!isAuthenticated && (
         <Route path="/login">
           <AuthForm type="login" />
         </Route>
       )}
-      {!authCtx.isLoggedIn && (
+      {!isAuthenticated && (
         <Route path="/registration">
           <AuthForm type="signup" />
         </Route>

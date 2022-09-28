@@ -1,15 +1,29 @@
-import React, { useContext } from "react";
+import React, { useEffect, useState } from "react";
 import IonIcon from "@reacticons/ionicons";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import classes from "./HomeHeader.module.scss";
-import AuthContext from "../../../store/auth-context";
+import { logout } from "../../../store/authSlice";
+// import AuthContext from "../../../store/auth-context";
 
 const HomeHeader = () => {
-  const authCtx = useContext(AuthContext);
-  const { isLoggedIn, logout } = authCtx;
+  const initialToken = localStorage.getItem("token");
+  const [token, setToken] = useState(initialToken);
+  const history = useHistory();
+  useEffect(() => {
+    setToken(initialToken);
+  }, []);
+  const userIsLoggedIn = !!token;
+  const dispatch = useDispatch();
+  // const auth = useSelector(isLoggedIn);
+  // const authCtx = useContext(AuthContext);
+  // const { isLoggedIn, logout } = authCtx;
 
   const logoutHandler = () => {
-    logout();
+    // logout();
+    dispatch(logout());
     localStorage.removeItem("username");
+    history.replace("/");
   };
   return (
     <header className={classes.header}>
@@ -50,13 +64,13 @@ const HomeHeader = () => {
           </ul>
         </div>
         <div className={classes["nav-auth"]}>
-          {!isLoggedIn && (
+          {!userIsLoggedIn && (
             <a className={`general-btn ${classes["auth-login"]}`} href="/login">
               <IonIcon className={classes["auth-icon"]} name="log-in-outline" />
               Log In
             </a>
           )}
-          {!isLoggedIn && (
+          {!userIsLoggedIn && (
             <a
               className={` general-btn ${classes["auth-signup"]}`}
               href="/registration"
@@ -68,7 +82,7 @@ const HomeHeader = () => {
               Sign Up
             </a>
           )}
-          {isLoggedIn && (
+          {userIsLoggedIn && (
             <button
               onClick={logoutHandler}
               type="button"
