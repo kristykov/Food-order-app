@@ -1,7 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "../../store/cartSlice";
+import { IRootState } from "../../store/rootReducer";
 import Modal from "../UI/Modal";
 import classes from "./Cart.module.scss";
-import CartContext from "../../store/cart-context";
+// import CartContext from "../../store/cart-context";
 
 interface ICartClose {
   onClose: () => void;
@@ -10,30 +13,49 @@ interface ICartClose {
 interface IAddedItem {
   id: string;
   name: string;
-  amount: number;
-  price: string;
+  quantity: number;
+  price: number;
   image: string;
 }
 
 const Cart = ({ onClose }: ICartClose) => {
-  const { items, totalAmount, addItem, removeItem } = useContext(CartContext);
+  const dispatch = useDispatch();
 
-  const totalCartAmount = `${totalAmount.toFixed(2)}`;
+  const items = useSelector((state: IRootState) => {
+    return state.cart.items;
+  });
+
+  const totalAmount = useSelector((state: IRootState) => {
+    return state.cart.totalSum;
+  });
+
+  // const { items, totalAmount, addItem, removeItem } = useContext(CartContext);
+
+  const totalCartAmount = totalAmount;
 
   const hasItems = items.length > 0;
 
   const cartItemRemoveHandler = (id: string) => {
-    removeItem(id);
+    dispatch(cartActions.removeItemFromCart(id));
+    // removeItem(id);
   };
 
   const cartItemAddHandler = (item: IAddedItem) => {
-    addItem({
-      id: item.id,
-      name: item.name,
-      amount: 1,
-      price: item.price,
-      image: item.image,
-    });
+    dispatch(
+      cartActions.addItemToCart({
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        image: item.image,
+      }),
+    );
+    // addItem({
+    //   id: item.id,
+    //   name: item.name,
+    //   amount: 1,
+    //   price: item.price,
+    //   image: item.image,
+    // });
   };
 
   const cartItems = (
@@ -61,8 +83,8 @@ const Cart = ({ onClose }: ICartClose) => {
                   </button>
 
                   <input
-                    defaultValue="1"
-                    value={item.amount}
+                    // defaultValue="1"
+                    value={item.quantity}
                     type="number"
                     name="amount"
                     min="1"
