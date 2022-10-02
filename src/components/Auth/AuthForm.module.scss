@@ -36,16 +36,14 @@
       text-align: left;
       border-radius: 4px;
       border: 1px solid #fcdbc5;
+      outline: none;
     }
 
     &-input:-webkit-autofill {
-      -webkit-box-shadow: 0 0 0px 1000px var(--gray-bg-color) inset;
-
-      &:focus-visible {
-        outline: none;
-      }
+      -webkit-box-shadow: 0 0 0px 1000px #fff inset;
     }
   }
+
   &-error-text {
     text-align: left;
     font-size: var(--smaller-font-size);
