@@ -1,5 +1,6 @@
 import { combineReducers } from "@reduxjs/toolkit";
-// import authReducer from "./authSlice";
+import storage from "redux-persist/lib/storage";
+import { persistReducer } from "redux-persist";
 import cartReducer, { IAddedItem } from "./cartSlice";
 
 interface ICartState {
@@ -13,8 +14,14 @@ export interface IRootState {
 }
 
 const rootReducer = combineReducers({
-  // auth: authReducer,
   cart: cartReducer,
 });
 
-export default rootReducer;
+const persistConfig = {
+  key: "cart",
+  storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+export default persistedReducer;
