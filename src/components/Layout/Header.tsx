@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import IonIcon from "@reacticons/ionicons";
 import classes from "./Header.module.scss";
 import CartCounter from "./CartCounter";
-import Logo from "../../assets/logo2.svg";
+import Logo from "../../assets/logo3.svg";
 
 interface IProps {
   onShowCart: () => void;
