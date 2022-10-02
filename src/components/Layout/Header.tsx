@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import IonIcon from "@reacticons/ionicons";
 import classes from "./Header.module.scss";
 import CartCounter from "./CartCounter";
@@ -16,7 +16,9 @@ const Header = ({ onShowCart, onQuery }: IProps) => {
     const input = (e.currentTarget as HTMLInputElement).value;
     setQ(input);
   };
-  onQuery(q);
+  useEffect(() => {
+    onQuery(q);
+  }, [onQuery, q]);
 
   return (
     <header className={classes.header}>

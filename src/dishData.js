@@ -4,7 +4,7 @@ const dishlist = [
     key: "1",
     name: "Bun Bo Nam Bo",
     image: "Bun-bo-nam-bo.png",
-    price: "8.10",
+    price: 8.1,
     type: "lunch",
   },
   {
@@ -12,7 +12,7 @@ const dishlist = [
     key: "2",
     name: "Bun Vit Gion",
     image: "Bun-vit-gion.png",
-    price: "8.10",
+    price: 8.1,
     type: "lunch",
   },
   {
@@ -20,7 +20,7 @@ const dishlist = [
     key: "3",
     name: "Bun Nem",
     image: "Bun-nem.png",
-    price: "8.10",
+    price: 8.1,
     type: "lunch",
   },
   {
@@ -28,7 +28,7 @@ const dishlist = [
     key: "4",
     name: "PhoVietnam",
     image: "PhoVietnam.png",
-    price: "8.10",
+    price: 8.1,
     type: "breakfast",
   },
   {
@@ -36,7 +36,7 @@ const dishlist = [
     key: "5",
     name: "Tofu Cari",
     image: "Tofu-cari.png",
-    price: "8.10",
+    price: 8.1,
     type: "coffee",
   },
   {
@@ -44,7 +44,7 @@ const dishlist = [
     key: "6",
     name: "Vit Gion Cari",
     image: "Vit-gion-cari.png",
-    price: "8.10",
+    price: 8.1,
     type: "lunch",
   },
   {
@@ -52,7 +52,7 @@ const dishlist = [
     key: "7",
     name: "Bun Bo Nam Bo",
     image: "Bun-bo-nam-bo.png",
-    price: "8.10",
+    price: 8.1,
     type: "lunch",
   },
   {
@@ -60,7 +60,7 @@ const dishlist = [
     key: "8",
     name: "Bun Vit Gion",
     image: "Bun-vit-gion.png",
-    price: "8.10",
+    price: 8.1,
     type: "lunch",
   },
   {
@@ -68,7 +68,7 @@ const dishlist = [
     key: "9",
     name: "Bun Nem",
     image: "Bun-nem.png",
-    price: "8.10",
+    price: 8.1,
     type: "lunch",
   },
   {
@@ -76,7 +76,7 @@ const dishlist = [
     key: "10",
     name: "PhoVietnam",
     image: "PhoVietnam.png",
-    price: "8.10",
+    price: 8.1,
     type: "lunch",
   },
   {
@@ -84,7 +84,7 @@ const dishlist = [
     key: "11",
     name: "Tofu Cari",
     image: "Tofu-cari.png",
-    price: "8.10",
+    price: 8.1,
     type: "lunch",
   },
   {
@@ -92,7 +92,7 @@ const dishlist = [
     key: "12",
     name: "Vit Gion Cari",
     image: "Vit-gion-cari.png",
-    price: "8.10",
+    price: 8.1,
     type: "lunch",
   },
 ];

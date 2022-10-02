@@ -39,7 +39,7 @@ const MenuCard = ({ id, name, image, price }: IDish) => {
       <div className={classes["card-context"]}>
         <div>
           <p>$</p>
-          <span>{price}</span>
+          <span>{price.toFixed(2)}</span>
         </div>
         <button className="general-btn" onClick={onOrderHandler} type="button">
           Order

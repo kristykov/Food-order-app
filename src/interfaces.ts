@@ -5,7 +5,7 @@ export interface IDish {
   key: string;
   name: string;
   image: string;
-  price: string;
+  price: number;
 }
 
 export type ChildrenType = { children?: React.ReactNode; onClose: () => void };

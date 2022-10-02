@@ -26,12 +26,13 @@ const Cart = ({ onClose }: ICartClose) => {
   });
 
   const totalAmount = useSelector((state: IRootState) => {
+    // number
     return state.cart.totalSum;
   });
 
   // const { items, totalAmount, addItem, removeItem } = useContext(CartContext);
 
-  const totalCartAmount = totalAmount;
+  const totalCartAmount = Math.abs(totalAmount);
 
   const hasItems = items.length > 0;
 
@@ -62,7 +63,7 @@ const Cart = ({ onClose }: ICartClose) => {
     <ul className={classes["cart-items"]}>
       {items.map((item) => {
         return (
-          <li className={classes["cart-item"]}>
+          <li key={item.id} className={classes["cart-item"]}>
             <div className={classes["cart-item-img"]}>
               <img src={require(`../../assets/${item.image}`).default} alt="" />
             </div>
@@ -70,7 +71,7 @@ const Cart = ({ onClose }: ICartClose) => {
               <h3>{item.name}</h3>
               <div className={classes["cart-item-info"]}>
                 <p>
-                  $<span>{item.price}</span>
+                  $<span>{item.price.toFixed(2)}</span>
                 </p>
                 <div className={classes["card-input-field"]}>
                   <button
@@ -83,6 +84,7 @@ const Cart = ({ onClose }: ICartClose) => {
                   </button>
 
                   <input
+                    readOnly
                     // defaultValue="1"
                     value={item.quantity}
                     type="number"
@@ -113,7 +115,7 @@ const Cart = ({ onClose }: ICartClose) => {
       {cartItems}
       <div className={classes["cart-total"]}>
         <span>Total Amount</span>
-        <span>${totalCartAmount}</span>
+        <span>${totalCartAmount.toFixed(2)}</span>
       </div>
       <div className={classes["cart-controls"]}>
         <button
