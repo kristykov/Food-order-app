@@ -33,7 +33,7 @@ const HomeServices = () => {
             </p>
           </div>
         </Fade>
-        <Fade direction="down">
+        <Fade direction="down" triggerOnce>
           <div className={classes["services-content"]}>
             <Logo3 className={classes["services-img"]} />
             <h3 className={classes["services-title"]}>Delivery</h3>
