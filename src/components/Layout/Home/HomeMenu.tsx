@@ -1,6 +1,8 @@
 import React from "react";
+import Carousel from "react-multi-carousel";
 import HomeSpecialItem from "./HomeSpecialItem";
 import classes from "./HomeMenu.module.scss";
+import "react-multi-carousel/lib/styles.css";
 
 const specialData = [
   {
@@ -41,13 +43,37 @@ const specialData = [
 ];
 
 const HomeMenu = () => {
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
   return (
     <section className={`${classes.menu} section`}>
       <div className="container">
         <span className="section-subtitle">Special</span>
         <h2 className="section-title">Our best menu</h2>
       </div>
-      <div className={`${classes["menu-container"]} container`}>
+      <Carousel
+        responsive={responsive}
+        infinite
+        arrows
+        className={`${classes["menu-container"]}`}
+      >
         {specialData.map((item) => {
           return (
             <HomeSpecialItem
@@ -60,7 +86,7 @@ const HomeMenu = () => {
             />
           );
         })}
-      </div>
+      </Carousel>
     </section>
   );
 };

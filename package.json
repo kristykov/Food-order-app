@@ -73,6 +73,7 @@
     "babel-jest": "^29.0.2",
     "firebase": "^9.9.4",
     "prop-types": "^15.8.1",
+    "react-multi-carousel": "^2.8.2",
     "react-redux": "^8.0.4",
     "react-router-dom": "^5.3.3",
     "redux-persist": "^6.0.0"
