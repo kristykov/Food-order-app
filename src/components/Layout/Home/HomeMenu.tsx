@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
+import { Fade } from "react-awesome-reveal";
 import HomeSpecialItem from "./HomeSpecialItem";
 import classes from "./HomeMenu.module.scss";
 import "react-multi-carousel/lib/styles.css";
@@ -64,29 +65,31 @@ const HomeMenu = () => {
 
   return (
     <section className={`${classes.menu} section`}>
-      <div className="container">
-        <span className="section-subtitle">Special</span>
-        <h2 className="section-title">Our best menu</h2>
-      </div>
-      <Carousel
-        responsive={responsive}
-        infinite
-        arrows
-        className={`${classes["menu-container"]}`}
-      >
-        {specialData.map((item) => {
-          return (
-            <HomeSpecialItem
-              id={item.id}
-              key={item.id}
-              name={item.name}
-              detail={item.detail}
-              price={item.price}
-              img={item.img}
-            />
-          );
-        })}
-      </Carousel>
+      <Fade direction="down" triggerOnce>
+        <div className="container">
+          <span className="section-subtitle">Special</span>
+          <h2 className="section-title">Our best menu</h2>
+        </div>
+        <Carousel
+          responsive={responsive}
+          infinite
+          arrows
+          className={`${classes["menu-container"]}`}
+        >
+          {specialData.map((item) => {
+            return (
+              <HomeSpecialItem
+                id={item.id}
+                key={item.id}
+                name={item.name}
+                detail={item.detail}
+                price={item.price}
+                img={item.img}
+              />
+            );
+          })}
+        </Carousel>
+      </Fade>
     </section>
   );
 };
