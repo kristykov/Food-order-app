@@ -17,13 +17,13 @@
   &-phone {
     position: absolute;
     bottom: 0;
-    left: 100px;
+    right: 100px;
   }
 
   &-description {
     display: flex;
     flex-direction: column;
-    margin-left: 20rem;
+    margin-right: 20rem;
   }
 
   &-title {

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
-import Home from "../pages/Home/Home";
+import Home from "../components/Layout/Home/Home";
 import Menu from "../pages/Menu/Menu";
 import AuthForm from "../components/Auth/AuthForm";
 import AuthContext from "../store/auth-context";
