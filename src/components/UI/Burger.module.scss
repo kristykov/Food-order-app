@@ -1,0 +1,36 @@
+.burger {
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  display: none;
+  top: 1rem;
+  left: 2rem;
+  z-index: 20;
+
+  @media screen and (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &-line {
+    width: 2rem;
+    height: 0.25rem;
+    transform-origin: 1px;
+    border-radius: 2rem;
+    background-color: var(--orange-color);
+
+    &-first {
+      transform: rotate(45deg);
+    }
+
+    &-second {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    &-third {
+      transform: rotate(-45deg);
+    }
+  }
+}

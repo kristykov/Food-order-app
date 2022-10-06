@@ -23,24 +23,6 @@
     display: flex;
   }
 
-  &-list {
-    display: flex;
-  }
-
-  &-item {
-    margin-left: 2.5rem;
-    text-decoration: none;
-  }
-
-  &-link {
-    font-weight: 500;
-    transition: 0.4s;
-
-    &:hover {
-      color: var(--orange-color);
-    }
-  }
-
   &-auth {
     display: flex;
     flex-direction: row;
@@ -85,4 +67,12 @@ a.auth-signup {
 
 .active-link {
   color: var(--orange-color);
+}
+
+@media screen and (max-width: 1023px) {
+  .nav {
+    &-logo {
+      opacity: 0;
+    }
+  }
 }

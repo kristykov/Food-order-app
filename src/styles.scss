@@ -135,3 +135,13 @@ a {
 .react-multiple-carousel__arrow--left {
   left: 0px;
 }
+
+@media screen and (max-width: 1023px) {
+  // .nav {
+  //   max-width: 1000px;
+  // }
+
+  .container {
+    max-width: 785px;
+  }
+}
