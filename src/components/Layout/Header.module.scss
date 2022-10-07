@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1200px;
+    width: 100%;
   }
 
   &-content {
@@ -75,8 +75,20 @@
 
 @media screen and (max-width: 1023px) {
   .header {
+    padding: 2rem 12rem 5rem 12rem;
+    height: 10rem;
+
     &-container {
-      max-width: 800px;
+      // max-width: 600px;
     }
+  }
+
+  .header-form-controls {
+    position: absolute;
+    top: 6rem;
+  }
+
+  .header-form-controls input {
+    width: 37rem;
   }
 }
