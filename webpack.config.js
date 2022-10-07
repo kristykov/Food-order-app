@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = ({ mode }) => {
   return {
@@ -49,6 +50,9 @@ module.exports = ({ mode }) => {
         filename: "index.html",
         template: path.resolve("./src/index.html"),
         // template: "./src/index.html",
+      }),
+      new CopyPlugin({
+        patterns: ["_redirects"],
       }),
     ],
   };
