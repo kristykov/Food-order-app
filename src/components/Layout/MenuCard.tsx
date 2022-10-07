@@ -2,12 +2,10 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { IDish } from "../../interfaces";
 import { cartActions } from "../../store/cartSlice";
-// import CartContext from "../../store/cart-context";
 import classes from "./MenuCard.module.scss";
 
 const MenuCard = ({ id, name, image, price }: IDish) => {
   const dispatch = useDispatch();
-  // const { addItem } = useContext(CartContext);
 
   const onOrderHandler = () => {
     dispatch(
@@ -18,13 +16,6 @@ const MenuCard = ({ id, name, image, price }: IDish) => {
         image,
       }),
     );
-    // addItem({
-    //   id,
-    //   name,
-    //   amount: 1,
-    //   price,
-    //   image,
-    // });
   };
   return (
     <div className={classes.card} key={id}>

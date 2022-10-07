@@ -1,10 +1,4 @@
 .reviews {
-  color: black;
-
-  &-container {
-    color: black;
-  }
-
   &-content {
     display: flex;
     align-items: center;
@@ -13,16 +7,6 @@
 
   &-description {
     max-width: 400px;
-  }
-
-  &-title {
-    color: black;
-  }
-
-  &-customer {
-    &-profile {
-      color: black;
-    }
   }
 }
 
@@ -44,14 +28,6 @@
 
   &-name {
     font-weight: 600;
-  }
-
-  &-job {
-    color: black;
-  }
-
-  &-review {
-    color: black;
   }
 
   &-rate {

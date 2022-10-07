@@ -13,10 +13,8 @@ const HomeReviews = () => {
           <div className={classes["reviews-content"]}>
             <img className={classes.burger} src={burger} alt="burger" />
             <div className={classes["reviews-description"]}>
-              <h3 className={`${classes["reviews-title"]} section-title`}>
-                What our customers say about us
-              </h3>
-              <div className={classes["reviews-customer-profile"]}>
+              <h3 className="section-title">What our customers say about us</h3>
+              <div>
                 <div className={classes.customer}>
                   <img
                     className={classes["customer-pic"]}
@@ -26,10 +24,10 @@ const HomeReviews = () => {
 
                   <div className={classes["customer-data"]}>
                     <span className={classes["customer-name"]}>Joe Doye</span>
-                    <span className={classes["customer-job"]}>Student</span>
+                    <span>Student</span>
                   </div>
                 </div>
-                <p className={classes["customer-review"]}>
+                <p>
                   The food is really delicious. The delivery time is prettyr
                   fast. I would recommend this place to everyone!
                 </p>

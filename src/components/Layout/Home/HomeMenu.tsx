@@ -64,7 +64,7 @@ const HomeMenu = () => {
   };
 
   return (
-    <section className={`${classes.menu} section`}>
+    <section className="section">
       <Fade direction="down" triggerOnce>
         <div className="container">
           <span className="section-subtitle">Special</span>

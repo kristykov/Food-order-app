@@ -4,7 +4,6 @@ import { cartActions } from "../../store/cartSlice";
 import { IRootState } from "../../store/rootReducer";
 import Modal from "../UI/Modal";
 import classes from "./Cart.module.scss";
-// import CartContext from "../../store/cart-context";
 
 interface ICartClose {
   onClose: () => void;
@@ -26,11 +25,8 @@ const Cart = ({ onClose }: ICartClose) => {
   });
 
   const totalAmount = useSelector((state: IRootState) => {
-    // number
     return state.cart.totalSum;
   });
-
-  // const { items, totalAmount, addItem, removeItem } = useContext(CartContext);
 
   const totalCartAmount = Math.abs(totalAmount);
 
@@ -38,7 +34,6 @@ const Cart = ({ onClose }: ICartClose) => {
 
   const cartItemRemoveHandler = (id: string) => {
     dispatch(cartActions.removeItemFromCart(id));
-    // removeItem(id);
   };
 
   const cartItemAddHandler = (item: IAddedItem) => {
@@ -50,13 +45,6 @@ const Cart = ({ onClose }: ICartClose) => {
         image: item.image,
       }),
     );
-    // addItem({
-    //   id: item.id,
-    //   name: item.name,
-    //   amount: 1,
-    //   price: item.price,
-    //   image: item.image,
-    // });
   };
 
   const cartItems = (
@@ -85,7 +73,6 @@ const Cart = ({ onClose }: ICartClose) => {
 
                   <input
                     readOnly
-                    // defaultValue="1"
                     value={item.quantity}
                     type="number"
                     name="amount"

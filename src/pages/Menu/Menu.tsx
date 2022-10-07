@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import CartProvider from "../../store/CartProvider";
 import Header from "../../components/Layout/Header";
 import MainMenu from "../../components/Layout/MainMenu";
 import Cart from "../../components/Cart/Cart";
@@ -21,14 +20,12 @@ const Menu = () => {
   };
 
   return (
-    // <CartProvider>
     <>
       <Header onShowCart={showCartHandler} onQuery={queryHandler} />
       <MainMenu searchStr={searchStr} />
       {cartIsShown && <Cart onClose={hideCartHandler} />}
       <Footer />
     </>
-    // </CartProvider>
   );
 };
 export default Menu;
