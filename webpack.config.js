@@ -19,8 +19,9 @@ module.exports = ({ mode }) => {
       maxAssetSize: 512000,
     },
     devServer: {
-      port: 8080,
-      historyApiFallback: true,
+      contentBase: "./build",
+      // port: 8080,
+      // historyApiFallback: true,
     },
     module: {
       rules: [
@@ -46,7 +47,8 @@ module.exports = ({ mode }) => {
     plugins: [
       new HtmlWebpackPlugin({
         filename: "index.html",
-        template: "./src/index.html",
+        template: path.resolve("./src/index.html"),
+        // template: "./src/index.html",
       }),
     ],
   };
