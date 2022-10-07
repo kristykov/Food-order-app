@@ -21,7 +21,7 @@ module.exports = ({ mode }) => {
     devServer: {
       contentBase: "./build",
       // port: 8080,
-      // historyApiFallback: true,
+      historyApiFallback: true,
     },
     module: {
       rules: [
