@@ -26,3 +26,7 @@ The app was designed by me using
 ![Figma](https://img.shields.io/badge/-Figma-0D1117?style=for-the-badge&logo=Figma)
 <img width="1332" alt="Screenshot 2022-10-06 at 20 01 27" src="https://user-images.githubusercontent.com/42784731/194387281-ef763d2a-7d49-40d1-95d7-c7d73bb58fd2.png">
 <img width="1341" alt="Screenshot 2022-10-06 at 20 02 14" src="https://user-images.githubusercontent.com/42784731/194387308-3bc6a4be-5230-418a-8152-1048bc63dd9b.png">
+
+## Deploy
+[Click here to check it out](https://food-order-delivery-app.netlify.app/)
+
