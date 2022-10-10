@@ -20,8 +20,8 @@ module.exports = ({ mode }) => {
       maxAssetSize: 512000,
     },
     devServer: {
-      contentBase: "./build",
-      // port: 8080,
+      // contentBase: "./build",
+      port: 8080,
       historyApiFallback: true,
     },
     module: {

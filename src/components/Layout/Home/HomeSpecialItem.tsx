@@ -18,7 +18,7 @@ const HomeSpecialItem = ({ id, name, detail, price, img }: ISpecialItem) => {
         alt=""
       />
       <div className={classes["menu-card"]}>
-        <h3 className={classes["menu-name"]}>{name}</h3>
+        <h3>{name}</h3>
         <span className={classes["menu-detail"]}>{detail}</span>
         <span className={classes["menu-price"]}>{`$${price.toFixed(2)}`}</span>
         <a className={classes["menu-btn"]} href="/pic">

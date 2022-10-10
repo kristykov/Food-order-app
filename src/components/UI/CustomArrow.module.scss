@@ -1,0 +1,46 @@
+.arrow {
+  &-btn {
+    position: absolute;
+    outline: 0;
+    transition: all 0.5s;
+    border-radius: 35px;
+    z-index: 1000;
+    border: 0;
+    background: var(--orange-color);
+    min-width: 43px;
+    min-height: 43px;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &-icon {
+    font-size: 26px;
+    color: #fff;
+
+    &-left {
+      transform: translateX(0px);
+      transition: transform 0.4s ease;
+    }
+
+    &-right {
+      transform: translateX(0px);
+      transition: transform 0.4s ease;
+    }
+
+    &-left:hover {
+      transform: translateX(-3px);
+    }
+
+    &-right:hover {
+      transform: translateX(3px);
+    }
+  }
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}

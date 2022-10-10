@@ -4,6 +4,7 @@ import { Fade } from "react-awesome-reveal";
 import HomeSpecialItem from "./HomeSpecialItem";
 import classes from "./HomeMenu.module.scss";
 import "react-multi-carousel/lib/styles.css";
+import CustomRightArrow, { CustomLeftArrow } from "../../UI/CustomArrow";
 
 const specialData = [
   {
@@ -44,6 +45,10 @@ const specialData = [
 ];
 
 const HomeMenu = () => {
+  const onHandleArrow = () => {
+    console.log("gg");
+  };
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -70,11 +75,14 @@ const HomeMenu = () => {
           <span className="section-subtitle">Special</span>
           <h2 className="section-title">Our best menu</h2>
         </div>
+
         <Carousel
           responsive={responsive}
           infinite
           arrows
           className={`${classes["menu-container"]}`}
+          customRightArrow={<CustomRightArrow onClick={onHandleArrow} />}
+          customLeftArrow={<CustomLeftArrow onClick={onHandleArrow} />}
         >
           {specialData.map((item) => {
             return (
