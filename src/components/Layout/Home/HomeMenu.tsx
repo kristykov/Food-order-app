@@ -42,6 +42,14 @@ const specialData = [
     price: 22,
     img: "plate5",
   },
+  {
+    id: "p6",
+    name: "Buffalos pizza",
+    detail: "Delicious dish",
+    price: 25,
+    img: "plate6",
+  },
+
 ];
 
 const HomeMenu = () => {
