@@ -47,7 +47,7 @@ const specialData = [
     name: "Buffalos pizza",
     detail: "Delicious dish",
     price: 25,
-    img: "plate6",
+    img: "plate7",
   },
 
 ];
