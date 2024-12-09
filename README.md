@@ -7,7 +7,6 @@ This is an application that allows a user make an order: pick dishes and put the
 ![TypeScript](https://img.shields.io/badge/-TypeScript-0D1117?style=for-the-badge&logo=TypeScript)
 ![Redux](https://img.shields.io/badge/-Redux-0D1117?style=for-the-badge&logo=Redux)
 ![Webpack](https://img.shields.io/badge/-Webpack-0D1117?style=for-the-badge&logo=Webpack)
-![Babel](https://img.shields.io/badge/-Babel-0D1117?style=for-the-badge&logo=Babel)
 ![Sass](https://img.shields.io/badge/-Sass-0D1117?style=for-the-badge&logo=Sass)
 ![Eslint](https://img.shields.io/badge/-Eslint-0D1117?style=for-the-badge&logo=Eslint)
 ![Jest](https://img.shields.io/badge/-Jest-0D1117?style=for-the-badge&logo=Jest)
